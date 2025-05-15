@@ -356,9 +356,18 @@ export const models: ModelsStore = {
                 ],
                 availableColors: constructionColors,
               },
-              RAL7016.001 ("langai keturiu stiklu")
-              RAL7016.002 ("langu remai sesiu stiklu")
-
+              // RAL7016.001 ("langai keturiu stiklu")
+              // RAL7016.002 ("langu remai sesiu stiklu")
+              // 0128_Whi ("stogo mesh")
+              // _0130_Ga ("konstrukcijos mesh reguliuojanti spalva") 
+              // "Roletai reaguliuojas aut"
+              // RAL7016.004 ("langiniu konstrukcijos spalva, langines dvi tik stovi")
+              // Wood_Ven.001 "lameliu spalvos mesh"
+              // RAL7016.003 ("langines dideles konstrukcijos spalva")
+              // Wood_Ven.002 (dideliu langiniu lamesles)
+              // RAL7016.005 ("langines uzdengia visa siena 4, remas")
+              // Wood_Ven.003 ("lameliu spalva, kai ten yra 4 lanines")
+              // 0049_Bei )("roletu mesh")
 
 
               {
