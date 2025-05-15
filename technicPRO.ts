@@ -140,7 +140,7 @@ export const models: ModelsStore = {
     pavilon: {
       label: "Pavilon",
       value: "pavilon",
-      price: 3700,
+      price: 7200,
       modelUrl: `${process.env.PUBLIC_URL}/pergola/carport/3d/Carport3.glb`,
       benefits: [
         "Privalumas #1",
@@ -153,13 +153,17 @@ export const models: ModelsStore = {
         key: "technic_pro",
         name: "Technic PRO",
         length: {
-          min: 216,
-          max: 696,
+          // min: 216,
+          // max: 696,
+          allowedValues: [
+            216, 236, 256, 276, 296, 316, 336, 356, 376, 396, 416, 436, 456,
+            476, 496, 516, 536, 556, 576, 596, 616, 636, 656, 676, 696,
+          ],
           individualRequestRanges: {
             min: 216,
             max: 696,
           },
-          interval: 25,
+          // interval: 25,
           upperText: "Ilgis",
         },
         height: {
@@ -173,13 +177,14 @@ export const models: ModelsStore = {
           upperText: "Aukštis",
         },
         width: {
-          min: 220,
-          max: 450,
+          // min: 220,
+          // max: 450,
+          allowedValues: [220, 270, 300, 330, 365, 400, 420, 450],
           individualRequestRanges: {
-            min: 200,
-            max: 400,
+            min: 220,
+            max: 450,
           },
-          interval: 50,
+          // interval: 50,
           upperText: "Plotis",
         },
         defaultColorOptions: [
@@ -220,7 +225,7 @@ export const models: ModelsStore = {
             value: "zip_screener",
             individualRequestRanges: {
               min: 150,
-              max: 586,
+              max: 450,
             },
             groupNames: ["roletai_3", "roletai_2", "roletai_1", "roletai_4"],
             meshNames: [],
@@ -253,8 +258,8 @@ export const models: ModelsStore = {
                 ],
                 availableColors: zipFabricColors,
               },
-            ],
-            availableTypes: [
+            // ],
+            // availableTypes: [
               // {
               //   label: "Stiklo storis",
               //   value: "8mm",
@@ -312,19 +317,27 @@ export const models: ModelsStore = {
               //     "Privalumas #5"
               //   ]
               // },
-            ],
-            price: 10,
-          },
+            // ],
+            // price: 10,
+          // },
           {
             itemName: "Langinės",
             label: "langinių",
             value: "shutters",
             src: `${process.env.PUBLIC_URL}/walls/shutters.png`,
             groupNames: [
-              "langines4cvr_1",
-              "Langinesdvigubos_4",
-              "disabled",
-              "Langinesdvigubos_2",
+              // "langines4cvr_1",
+              // "Langinesdvigubos_4",
+              // "disabled",
+              // "Langinesdvigubos_2",
+              groupNames: [
+                "langines4cvr_1",
+                "langines4cvr_3",
+                "langinescvr_2",
+                "langinescvr_4",
+                "langineviena_1",
+                "langineviena_3"
+              ],
             ],
             meshNames: [],
             defaultColorOptions: [
