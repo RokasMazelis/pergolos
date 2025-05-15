@@ -345,16 +345,22 @@ export const models: ModelsStore = {
                 label: "konstrukcijos",
                 groupNames: [],
                 meshNames: [
-                  "Komponen10",
-                  "Komponen05",
-                  "Komponen17",
-                  "Komponen27",
-                  "Komponen20",
-                  "Komponen25",
-                  "Komponen03",
+                  // "Komponen10",
+                  // "Komponen05",
+                  // "Komponen17",
+                  // "Komponen27",
+                  // "Komponen20",
+                  // "Komponen25",
+                  // "Komponen03",
+                  "_0130_Ga" // Cia yra mesh, kurio spalva pakeitus pasikeicia konstrukcijos spalva, ir dar roletu korpuso spalva
                 ],
                 availableColors: constructionColors,
               },
+              RAL7016.001 ("langai keturiu stiklu")
+              RAL7016.002 ("langu remai sesiu stiklu")
+
+
+
               {
                 label: "panelės",
                 groupNames: [],
@@ -433,30 +439,30 @@ export const models: ModelsStore = {
           // {itemName:"Roletai", label: "roletų", groupNames: [], meshNames: [], availableColors: constructionColors, availableTypes: [{itemName: "8mm", price: 10}] , price: 10},
           // {label: "žaliuzių", groupNames: [], meshNames: [], availableColors: constructionColors},
         ],
-        roofOptions: [
-          {
-            itemName: "Lubų plokštė",
-            src: `${process.env.PUBLIC_URL}/walls/roof_panel_carport.png`,
-            label: "lubų",
-            value: "roof_panel",
-            groupNames: [],
-            meshNames: [],
-            defaultColorOptions: [],
-            availableTypes: [],
-            availableColors: constructionColors,
-          },
+        // roofOptions: [
+        //   {
+        //     itemName: "Lubų plokštė",
+        //     src: `${process.env.PUBLIC_URL}/walls/roof_panel_carport.png`,
+        //     label: "lubų",
+        //     value: "roof_panel",
+        //     groupNames: [],
+        //     meshNames: [],
+        //     defaultColorOptions: [],
+        //     availableTypes: [],
+        //     availableColors: constructionColors,
+        //   },
         ],
         lighting: [
-          {
-            src: `${process.env.PUBLIC_URL}/lighting/strip_carport.png`,
-            label: "Strip #1",
-            value: "lighting:strip_carport",
-            price: 0,
-            type: "numeric",
-            min: 1,
-            max: 4,
-            benefits: ["Privalumas #1", "Kartu įskaičiuota ...", "ir t.t."],
-          },
+          // {
+          //   src: `${process.env.PUBLIC_URL}/lighting/strip_carport.png`,
+          //   label: "Strip #1",
+          //   value: "lighting:strip_carport",
+          //   price: 0,
+          //   type: "numeric",
+          //   min: 1,
+          //   max: 4,
+          //   benefits: ["Privalumas #1", "Kartu įskaičiuota ...", "ir t.t."],
+          // },
           {
             src: `${process.env.PUBLIC_URL}/lighting/spot.png`,
             label: "Spot",
@@ -465,7 +471,7 @@ export const models: ModelsStore = {
             type: "numeric",
             min: 8,
             max: 25,
-            benefits: ["Privalumas #1", "Kartu įskaičiuota ...", "ir t.t."],
+            benefits: ["LED Spot apšvietimas montuojamas ant sijų ir sukuria jaukią atmosferą. Rekomenduojama sumontuoti minimum 8  lemputes, kad apšvietimas būtų optimalus. (Šiltai balta)"],
           },
           {
             src: `${process.env.PUBLIC_URL}/lighting/strip.png`,
@@ -475,25 +481,35 @@ export const models: ModelsStore = {
             type: "numeric",
             min: 1,
             max: 4,
-            benefits: ["Privalumas #1", "Kartu įskaičiuota ...", "ir t.t."],
+            benefits: ["LED strip montuojama prie gegnių 90° kampų, tad kartu apšviečia ir konstrukcią ir stoginės vidų (Šiltai balta)"],
           },
-        ],
-        car_charging: [
           {
-            src: `${process.env.PUBLIC_URL}/pergola/carport/options/28.png`,
-            label: "Mašininė krovimo stotelė JUICEBOX PRO",
-            value: "car_charger",
-            price: 1670,
+            src: `${process.env.PUBLIC_URL}/lighting/box.png`,
+            label: "Box",
+            value: "lighting:box",
+            price: 120,
             type: "numeric",
-            min: 1,
-            max: 2,
-            benefits: [
-              "JuiceBox Pro užtikrina išmanų ir pilnavertį įkrovimą tiek privačioje, tiek gyvenamojoje aplinkoje.",
-              "Pasiekiamas 22 kW, 32 A ir 3 fazių galios lygis, o JuiceBox Pro yra aprūpintas visomis saugumo ir ryšio funkcijomis, kurios užtikrina, kad įkrovimas namuose ar biure būtų pilnas, paprastas ir be rūpesčių.",
-              "Jis turi Demand Limitation Pro funkciją, leidžiančią įkrauti didžiausia prieinama galia, jos neviršijant.",
-            ],
+            min: 4,
+            max: 25,
+            benefits: ["LED box - sukuria nuostabiai jaukią natūralios spalvos atmosferą. Vienas elementas sudarytas iš kelių šiltos šviesos diodų (125mm x 35mm), montuojamas prie stygų, (rekomenduojame pasirinkti minimum 4 tokio tipo šviesas)"],
           },
         ],
+        // car_charging: [
+        //   {
+        //     src: `${process.env.PUBLIC_URL}/pergola/carport/options/28.png`,
+        //     label: "Mašininė krovimo stotelė JUICEBOX PRO",
+        //     value: "car_charger",
+        //     price: 1670,
+        //     type: "numeric",
+        //     min: 1,
+        //     max: 2,
+        //     benefits: [
+        //       "JuiceBox Pro užtikrina išmanų ir pilnavertį įkrovimą tiek privačioje, tiek gyvenamojoje aplinkoje.",
+        //       "Pasiekiamas 22 kW, 32 A ir 3 fazių galios lygis, o JuiceBox Pro yra aprūpintas visomis saugumo ir ryšio funkcijomis, kurios užtikrina, kad įkrovimas namuose ar biure būtų pilnas, paprastas ir be rūpesčių.",
+        //       "Jis turi Demand Limitation Pro funkciją, leidžiančią įkrauti didžiausia prieinama galia, jos neviršijant.",
+        //     ],
+        //   },
+        // ],
         ir_lighting: [
           {
             label: "IR šildytuvas GR1 1,5 kW",
@@ -516,63 +532,63 @@ export const models: ModelsStore = {
             type: "text",
             benefits: ["Privalumas #1", "Kartu įskaičiuota ...", "ir t.t."],
           },
-        ],
-        solar_panel: [
-          {
-            label: "10x Saulės kolektorių paketas, 4.2 kW",
-            value: "solar_panel:1",
-            price: 5350,
-            type: "text",
-            benefits: [
-              "10 TIGER NEO N 54HL4-B fotovoltinių modulių (400-420 W) užtikrina stabilų elektros gamybą.",
-              "Huawei 5 kW inverteris optimizuoja energijos konversiją.",
-              "Puikus pasirinkimas vidutinio dydžio namams.",
-            ],
-          },
-          {
-            label: "12x Saulės kolektorių paketas, 5.04 kW",
-            value: "solar_panel:2",
-            price: 5850,
-            type: "text",
-            benefits: [
-              "12 TIGER NEO N 54HL4-B fotovoltinių modulių (400-420 W) leidžia generuoti dar daugiau elektros.",
-              "Huawei 5 kW inverteris užtikrina aukštą efektyvumą.",
-              "Didesnė galia reiškia dar greitesnį investicijos atsipirkimą.",
-            ],
-          },
-          {
-            label: "5x Saulės kolektorių paketas, 2.85 kW",
-            value: "solar_panel:3",
-            price: 4350,
-            type: "text",
-            benefits: [
-              "5 TIGER NEO N 72HL4-BDV fotovoltiniai moduliai (550-570 W) – kompaktiškas ir efektyvus sprendimas.",
-              "Huawei 3 kW inverteris užtikrina optimalų veikimą mažesniems poreikiams.",
-              "Puikus variantas mažesniems namams ar papildomai saulės energijos gamybai.",
-            ],
-          },
-          {
-            label: "10x Saulės kolektorių paketas, 5.7 kW",
-            value: "solar_panel:4",
-            price: 6100,
-            type: "text",
-            benefits: [
-              "10 TIGER NEO N 72HL4-BDV fotovoltinių modulių (550-570 W) didesnei energijos gamybai.",
-              "Huawei 5 kW inverteris užtikrina stabilų ir efektyvų veikimą.",
-              "Puikus pasirinkimas didesniems namams ar verslo objektams.",
-            ],
-          },
-        ],
-        amountOfGenericPhotos: 4,
-        enabledOptions: [
-          {
-            label: "Mašinų krovimo stotelė",
-            type: "numeric",
-            min: 1,
-            max: 2,
-            disclaimer: "Papildomas tekstas Carport #1",
-            cost: 10,
-          },
+        // ],
+        // solar_panel: [
+        //   {
+        //     label: "10x Saulės kolektorių paketas, 4.2 kW",
+        //     value: "solar_panel:1",
+        //     price: 5350,
+        //     type: "text",
+        //     benefits: [
+        //       "10 TIGER NEO N 54HL4-B fotovoltinių modulių (400-420 W) užtikrina stabilų elektros gamybą.",
+        //       "Huawei 5 kW inverteris optimizuoja energijos konversiją.",
+        //       "Puikus pasirinkimas vidutinio dydžio namams.",
+        //     ],
+        //   },
+        //   {
+        //     label: "12x Saulės kolektorių paketas, 5.04 kW",
+        //     value: "solar_panel:2",
+        //     price: 5850,
+        //     type: "text",
+        //     benefits: [
+        //       "12 TIGER NEO N 54HL4-B fotovoltinių modulių (400-420 W) leidžia generuoti dar daugiau elektros.",
+        //       "Huawei 5 kW inverteris užtikrina aukštą efektyvumą.",
+        //       "Didesnė galia reiškia dar greitesnį investicijos atsipirkimą.",
+        //     ],
+        //   },
+        //   {
+        //     label: "5x Saulės kolektorių paketas, 2.85 kW",
+        //     value: "solar_panel:3",
+        //     price: 4350,
+        //     type: "text",
+        //     benefits: [
+        //       "5 TIGER NEO N 72HL4-BDV fotovoltiniai moduliai (550-570 W) – kompaktiškas ir efektyvus sprendimas.",
+        //       "Huawei 3 kW inverteris užtikrina optimalų veikimą mažesniems poreikiams.",
+        //       "Puikus variantas mažesniems namams ar papildomai saulės energijos gamybai.",
+        //     ],
+        //   },
+        //   {
+        //     label: "10x Saulės kolektorių paketas, 5.7 kW",
+        //     value: "solar_panel:4",
+        //     price: 6100,
+        //     type: "text",
+        //     benefits: [
+        //       "10 TIGER NEO N 72HL4-BDV fotovoltinių modulių (550-570 W) didesnei energijos gamybai.",
+        //       "Huawei 5 kW inverteris užtikrina stabilų ir efektyvų veikimą.",
+        //       "Puikus pasirinkimas didesniems namams ar verslo objektams.",
+        //     ],
+        //   },
+        // ],
+        // amountOfGenericPhotos: 4,
+        // enabledOptions: [
+        //   {
+        //     label: "Mašinų krovimo stotelė",
+        //     type: "numeric",
+        //     min: 1,
+        //     max: 2,
+        //     disclaimer: "Papildomas tekstas Carport #1",
+        //     cost: 10,
+        //   },
         ],
       },
     },
@@ -582,7 +598,7 @@ export const models: ModelsStore = {
 export const initialConfig: Record<string, Config> = {
   carport: {
     model_type: "pavilon",
-    model: "carport",
+    model: "Technic RPO",
     stogo_color: "#924522",
     width: 300,
     length: 490,
