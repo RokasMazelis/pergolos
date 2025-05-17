@@ -136,7 +136,7 @@ export const irSildytuvai: EnabledOption[] = [
 ];
 
 export const models: ModelsStore = {
-  carport: {
+  TechnicPRO: {
     pavilon: {
       label: "Pavilon",
       value: "pavilon",
@@ -199,7 +199,7 @@ export const models: ModelsStore = {
               // "Komponen20",
               // "Komponen25",
               // "Komponen03",
-              "ifcbuild78",
+               "_0130_Ga", //("konstrukcijos mesh reguliuojanti spalva") 
             ],
             availableColors: constructionColors,
           },
@@ -213,12 +213,31 @@ export const models: ModelsStore = {
               // "IfcBuild06",
               // "IfcBuild04",
               // "IfcBuild01",
-              "ifcbuil224",
+              // "ifcbuil224",
+              "0128_Whi", //("stogo mesh")
             ],
             availableColors: louvreRoofColors,
           },
         ],
-        wallOptions: [
+        wallOptions:[
+          {
+            itemName: "Stiklo sistema",
+            label: "stiklai",
+            value: "stiklai", //nzn kaip tiksliai tu uzsivadines sita
+            groupNames: ["stiklai_1", "stiklai_4", "stiklai_3", "stiklai_2"], //taikiau logika, kad atitiktu su roletais
+            meshNames: [],
+            //src: `${process.env.PUBLIC_URL}/walls/stiklai.png`, (nzn tikro source)
+            defaultColorOptions: [
+              {
+                label: "konstrukcijos",
+                groupNames: [],
+                meshNames: [  
+                    "RAL7016.001", //("langai keturiu stiklu") stiklai_1 ir stiklai_3
+                    "RAL7016.002", //("langu remai sesiu stiklu") stiklai_2 ir stiklai_4
+                  ]
+              }, 
+            ]
+          },
           {
             itemName: "Roletai",
             label: "roletų",
@@ -235,13 +254,14 @@ export const models: ModelsStore = {
                 label: "konstrukcijos",
                 groupNames: [],
                 meshNames: [
-                  "Komponen10",
-                  "Komponen05",
-                  "Komponen17",
-                  "Komponen27",
-                  "Komponen20",
-                  "Komponen25",
-                  "Komponen03",
+                  // "Komponen10",
+                  // "Komponen05",
+                  // "Komponen17",
+                  // "Komponen27",
+                  // "Komponen20",
+                  // "Komponen25",
+                  // "Komponen03",
+                  "_0130_Ga",// Roletų remo spalva keičiasi kartu su konstrukcijos spalva
                 ],
                 availableColors: zipConstructionColors,
               },
@@ -249,15 +269,18 @@ export const models: ModelsStore = {
                 label: "panelės",
                 groupNames: [],
                 meshNames: [
-                  "IfcBuildin",
-                  "IfcBuild02",
-                  "IfcBuild05",
-                  "IfcBuild06",
-                  "IfcBuild04",
-                  "IfcBuild01",
+                  // "IfcBuildin",
+                  // "IfcBuild02",
+                  // "IfcBuild05",
+                  // "IfcBuild06",
+                  // "IfcBuild04",
+                  // "IfcBuild01",
+                  "0049_Bei", //("roletu mesh")
                 ],
                 availableColors: zipFabricColors,
               },
+            ]
+            }
             // ],
             // availableTypes: [
               // {
@@ -330,7 +353,7 @@ export const models: ModelsStore = {
               // "Langinesdvigubos_4",
               // "disabled",
               // "Langinesdvigubos_2",
-              groupNames: [
+            groupNames: [
                 "langines4cvr_1",
                 "langines4cvr_3",
                 "langinescvr_2",
@@ -352,7 +375,13 @@ export const models: ModelsStore = {
                   // "Komponen20",
                   // "Komponen25",
                   // "Komponen03",
-                  "_0130_Ga" // Cia yra mesh, kurio spalva pakeitus pasikeicia konstrukcijos spalva, ir dar roletu korpuso spalva
+                  "_0130_Ga", // Cia yra mesh, kurio spalva pakeitus pasikeicia konstrukcijos spalva, ir dar roletu korpuso spalva
+                  "RAL7016.003", //("langines dideles konstrukcijos spalva") langinescvr_
+                  "Wood_Ven.002", //(dideliu langiniu lamesles) langinescvr_
+                  "RAL7016.005", //("langines uzdengia visa siena 4, remas") langines4cvr_
+                  "Wood_Ven.003", //("lameliu spalva, kai ten yra 4 lanines, ") langines4cvr_
+                  "RAL7016.004", // langineviena
+                  "Wood_Ven.001", // langineviena lameliu spalva
                 ],
                 availableColors: constructionColors,
               },
@@ -461,6 +490,7 @@ export const models: ModelsStore = {
         //     availableColors: constructionColors,
         //   },
         ],
+      ],
         lighting: [
           // {
           //   src: `${process.env.PUBLIC_URL}/lighting/strip_carport.png`,
