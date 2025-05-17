@@ -221,24 +221,6 @@ export const models: ModelsStore = {
         ],
         wallOptions:[
           {
-            itemName: "Stiklo sistema",
-            label: "stiklai",
-            value: "stiklai", //nzn kaip tiksliai tu uzsivadines sita
-            groupNames: ["stiklai_1", "stiklai_4", "stiklai_3", "stiklai_2"], //taikiau logika, kad atitiktu su roletais
-            meshNames: [],
-            //src: `${process.env.PUBLIC_URL}/walls/stiklai.png`, (nzn tikro source)
-            defaultColorOptions: [
-              {
-                label: "konstrukcijos",
-                groupNames: [],
-                meshNames: [  
-                    "RAL7016.001", //("langai keturiu stiklu") stiklai_1 ir stiklai_3
-                    "RAL7016.002", //("langu remai sesiu stiklu") stiklai_2 ir stiklai_4
-                  ]
-              }, 
-            ]
-          },
-          {
             itemName: "Roletai",
             label: "roletų",
             value: "zip_screener",
@@ -280,7 +262,25 @@ export const models: ModelsStore = {
                 availableColors: zipFabricColors,
               },
             ]
-            }
+            {
+              itemName: "Stiklo sistema",
+              label: "stiklai",
+              value: "stiklai", //nzn kaip tiksliai tu uzsivadines sita
+              groupNames: ["stiklai_1", "stiklai_4", "stiklai_3", "stiklai_2"], //taikiau logika, kad atitiktu su roletais
+              meshNames: [],
+              //src: `${process.env.PUBLIC_URL}/walls/stiklai.png`, (nzn tikro source)
+              defaultColorOptions: [
+                {
+                  label: "konstrukcijos",
+                  groupNames: [],
+                  meshNames: [  
+                      "RAL7016.001", //("langai keturiu stiklu") stiklai_1 ir stiklai_3
+                      "RAL7016.002", //("langu remai sesiu stiklu") stiklai_2 ir stiklai_4
+                    ]
+                }, 
+              ]
+            },
+           // }
             // ],
             // availableTypes: [
               // {
@@ -398,9 +398,8 @@ export const models: ModelsStore = {
               // Wood_Ven.003 ("lameliu spalva, kai ten yra 4 lanines")
               // 0049_Bei )("roletu mesh")
 
-
               {
-                label: "panelės",
+                label: "panelės", // kas cia tos paneles?
                 groupNames: [],
                 meshNames: [
                   "IfcBuildin",
@@ -413,7 +412,7 @@ export const models: ModelsStore = {
                 availableColors: constructionColors,
               },
             ],
-            availableTypes: [
+            // availableTypes: [
               // {
               //   label: "Stiklo storis",
               //   value: "8mm",
@@ -471,12 +470,12 @@ export const models: ModelsStore = {
               //     "Privalumas #5"
               //   ]
               // },
-            ],
-            price: 10,
-          },
+          //   ],
+          //   price: 10,
+          // },
           // {itemName:"Roletai", label: "roletų", groupNames: [], meshNames: [], availableColors: constructionColors, availableTypes: [{itemName: "8mm", price: 10}] , price: 10},
           // {label: "žaliuzių", groupNames: [], meshNames: [], availableColors: constructionColors},
-        ],
+        // ],
         // roofOptions: [
         //   {
         //     itemName: "Lubų plokštė",
@@ -489,8 +488,8 @@ export const models: ModelsStore = {
         //     availableTypes: [],
         //     availableColors: constructionColors,
         //   },
-        ],
-      ],
+      //   ],
+      // ],
         lighting: [
           // {
           //   src: `${process.env.PUBLIC_URL}/lighting/strip_carport.png`,
