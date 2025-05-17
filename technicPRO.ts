@@ -475,7 +475,7 @@ export const models: ModelsStore = {
           // },
           // {itemName:"Roletai", label: "roletų", groupNames: [], meshNames: [], availableColors: constructionColors, availableTypes: [{itemName: "8mm", price: 10}] , price: 10},
           // {label: "žaliuzių", groupNames: [], meshNames: [], availableColors: constructionColors},
-        // ],
+        ],
         // roofOptions: [
         //   {
         //     itemName: "Lubų plokštė",
@@ -489,7 +489,7 @@ export const models: ModelsStore = {
         //     availableColors: constructionColors,
         //   },
       //   ],
-      // ],
+      
         lighting: [
           // {
           //   src: `${process.env.PUBLIC_URL}/lighting/strip_carport.png`,
